@@ -13,8 +13,8 @@ frontend (React, :3000) ──HTTP──▶ backend (FastAPI, :8000)
 
 | Tier | URL |
 | --- | --- |
-| Frontend | `https://<your-frontend>.vercel.app` |
-| Backend | `https://<your-backend>.onrender.com` (try `/health`) |
+| Frontend | https://llm-opal-sigma.vercel.app |
+| Backend | https://llm-chatbot-backend-ovel.onrender.com (try [`/health`](https://llm-chatbot-backend-ovel.onrender.com/health)) |
 | Repository | https://github.com/Himanshukdyn/LLM |
 | Demo video | `<link>` |
 
