@@ -1,5 +1,7 @@
 fastapi>=0.115,<1.0
 uvicorn[standard]>=0.30,<1.0
 pydantic>=2.7,<3.0
-litellm>=1.77,<2.0
+# Pinned: LiteLLM 1.110.x imports undeclared proxy deps (orjson, soundfile) on a
+# cache hit, so every cached answer would fail. 1.100.0 is tested and works.
+litellm==1.100.0
 diskcache>=5.6,<6.0

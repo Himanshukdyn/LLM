@@ -137,8 +137,8 @@ curl -s -i $API/chat -H 'Content-Type: application/json' -d '{"session_id":"x","
 
 ## 5. Setup Used
 
-- Editor: `<your editor, e.g. VS Code / Cursor>`
-- AI tools: Claude (Anthropic) to scaffold the code, tests and docs. Every part was reviewed and run locally.
+- Editor: VS Code
+- AI tools: Claude Code (Anthropic) in VS Code to scaffold the code, tests and docs, and to debug a LiteLLM version issue (1.110.x broke cache hits, so `litellm` is pinned to 1.100.0). Every part was reviewed and run locally.
 
 ## 6. Bonus features
 

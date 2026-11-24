@@ -7,6 +7,7 @@ us check that the built-in cache is wired up and that cache hits are detected.
 from __future__ import annotations
 
 import asyncio
+import dataclasses
 import uuid
 
 import pytest
@@ -17,6 +18,9 @@ from app.llm import LLMGateway, configure_litellm  # noqa: E402
 
 
 def test_litellm_cache_roundtrip(settings):
+    # LiteLLM rejects unknown providers even with mock_response, so use a real
+    # model name here. mock_response still means no network call is made.
+    settings = dataclasses.replace(settings, models=("gemini/gemini-2.5-flash",))
     acompletion = configure_litellm(settings)
     assert litellm.cache is not None
 
