@@ -145,6 +145,6 @@ curl -s -i $API/chat -H 'Content-Type: application/json' -d '{"session_id":"x","
 - **Failover demo in the UI:** a preset selector sends `X-Simulate-Failure` from the browser, so failover can be shown on the live site without curl.
 - **Per-session system prompt** (`system-prompt-input`). It is stored in SQLite, so later turns in the same session keep it.
 - **Extra metadata shown**: the answering `key_id` and a failover count badge when `fallback_attempts > 0`.
-- **Model per key**: `LLM_MODEL` can list one model per key, so `key_2` can be a different model or provider (e.g. `gemini/gemini-3.5-flash,groq/llama-3.3-70b-versatile`).
+- **Model per key**: `LLM_MODEL` can list one model per key, so `key_2` can be a different model or provider (e.g. `gemini/gemini-3.5-flash,groq/openai/gpt-oss-120b`).
 - **Disk cache option** (`CACHE_TYPE=disk`) so cached answers survive restarts. The cache lives on the same `/data` volume.
 - **Robustness:** atomic turn writes, per-session ordering lock, non-root runtime image, Docker `HEALTHCHECK`, and a test build stage (`make test-docker`).
