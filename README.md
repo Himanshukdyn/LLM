@@ -15,7 +15,7 @@ frontend (React, :3000) ──HTTP──▶ backend (FastAPI, :8000)
 | --- | --- |
 | Frontend | `https://<your-frontend>.vercel.app` |
 | Backend | `https://<your-backend>.onrender.com` (try `/health`) |
-| Repository | `https://github.com/<you>/<repo>` |
+| Repository | https://github.com/Himanshukdyn/LLM |
 | Demo video | `<link>` |
 
 ## 2. Run locally
