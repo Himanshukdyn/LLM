@@ -1,0 +1,21 @@
+# Render Blueprint for the backend (New > Blueprint, point at this repo).
+services:
+  - type: web
+    name: llm-chatbot-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: LLM_API_KEYS
+        sync: false            # paste "key1,key2" in the Render dashboard
+      - key: LLM_MODEL
+        value: gemini/gemini-3.5-flash
+      - key: DATABASE_URL
+        value: sqlite:////data/app.db
+      - key: ALLOWED_ORIGINS
+        sync: false            # e.g. https://your-app.vercel.app
+      - key: ENABLE_FAILURE_SIMULATION
+        value: "true"
