@@ -8,7 +8,7 @@ services:
         required: false
     environment:
       LLM_API_KEYS: ${LLM_API_KEYS:-}
-      LLM_MODEL: ${LLM_MODEL:-gemini/gemini-3.5-flash}
+      LLM_MODEL: ${LLM_MODEL:-groq/openai/gpt-oss-120b,gemini/gemini-3.5-flash}
       DATABASE_URL: ${DATABASE_URL:-sqlite:////data/app.db}
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:3000}
       ENABLE_FAILURE_SIMULATION: ${ENABLE_FAILURE_SIMULATION:-true}
